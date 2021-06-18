@@ -1,0 +1,17 @@
+<app-nav-bar-form></app-nav-bar-form>
+<div class="ctn-tam">
+    <form action="" class="info-ctn" name="codigoForm" #codigoForm="ngForm"  (ngSubmit)="onSubmit(codigoForm)">
+        <div class="info-title-ctn">
+            <h3 class="info-title">{{ "Cod-title" | translate }}</h3>
+        </div>      
+        <div class="input-ctn">
+            <input type="text" name="cod1" class="input" id="cod1" #cod1="ngModel" maxlength="8" [(ngModel)]="codigoModel.cod1" 
+            required>          
+        </div>
+        <div class="btn-ctn">
+            <button type="submit" class="inicio" [disabled]="!codigoForm.form.valid" >{{ "Btn-sig" | translate }}</button>
+        </div>    
+        
+    </form> 
+</div>
+
